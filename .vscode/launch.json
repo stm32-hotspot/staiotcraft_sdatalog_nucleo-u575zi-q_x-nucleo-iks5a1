@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "STM32U575 Debug (ST-LINK)",
+            "type": "cortex-debug",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "executable": "${command:cmake.launchTargetPath}",
+            "servertype": "stlink",
+            "device": "STM32U575ZITx",
+            "interface": "swd",
+            "runToEntryPoint": "main",
+            "gdbPath": "arm-none-eabi-gdb",
+            "preLaunchTask": "CMake: build"
+        }
+    ]
+}

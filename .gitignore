@@ -1,0 +1,7 @@
+**/.cache/
+**/.cmake/
+*.o
+*.obj
+mx.scratch
+!.settings
+build/
