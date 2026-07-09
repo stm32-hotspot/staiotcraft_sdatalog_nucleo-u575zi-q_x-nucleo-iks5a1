@@ -1,4 +1,4 @@
-# STEVAL-MKBOXPRO Serial Datalog Firmware
+#  NUCLEO-U575ZI-Q and X-NUCLEO-IKS5A1 Serial Datalog Firmware
 
 ## Introduction
 
