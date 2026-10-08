@@ -31,6 +31,15 @@
         "schema": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_mlc;2"
       },
       {
+        "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:iis2dulpx_acc;2",
+        "@type": "Component",
+        "displayName": {
+          "en": "IIS2DULPX_ACC"
+        },
+        "name": "iis2dulpx_acc",
+        "schema": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc;2"
+      },
+      {
         "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:log_controller;2",
         "@type": "Component",
         "displayName": {
@@ -156,6 +165,19 @@
         "writable": false
       },
       {
+        "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_acc:odr_triggered;2",
+        "@type": [
+          "Property",
+          "BooleanValue"
+        ],
+        "displayName": {
+          "en": "ODR Triggered"
+        },
+        "name": "odr_triggered",
+        "schema": "boolean",
+        "writable": true
+      },
+      {
         "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_acc:odr;2",
         "@type": [
           "Property",
@@ -277,6 +299,105 @@
           "en": "Hz"
         },
         "initialValue": 6
+      },
+      {
+        "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_acc:odr_t;2",
+        "@type": [
+          "Property",
+          "Initialized"
+        ],
+        "displayName": {
+          "en": "ODR T"
+        },
+        "name": "odr_t",
+        "schema": {
+          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_acc:odr_t:schema;2",
+          "@type": "Enum",
+          "displayName": {
+            "en": "Enum"
+          },
+          "enumValues": [
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_acc:odr_t:schema:hz12_5;2",
+              "displayName": {
+                "en": "12.5"
+              },
+              "enumValue": 0,
+              "name": "hz12_5"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_acc:odr_t:schema:hz25;2",
+              "displayName": {
+                "en": "25"
+              },
+              "enumValue": 1,
+              "name": "hz25"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_acc:odr_t:schema:hz50;2",
+              "displayName": {
+                "en": "50"
+              },
+              "enumValue": 2,
+              "name": "hz50"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_acc:odr_t:schema:hz100;2",
+              "displayName": {
+                "en": "100"
+              },
+              "enumValue": 3,
+              "name": "hz100"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_acc:odr_t:schema:hz200;2",
+              "displayName": {
+                "en": "200"
+              },
+              "enumValue": 4,
+              "name": "hz200"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_acc:odr_t:schema:hz400;2",
+              "displayName": {
+                "en": "400"
+              },
+              "enumValue": 5,
+              "name": "hz400"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_acc:odr_t:schema:hz800;2",
+              "displayName": {
+                "en": "800"
+              },
+              "enumValue": 6,
+              "name": "hz800"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_acc:odr_t:schema:hz1600;2",
+              "displayName": {
+                "en": "1600"
+              },
+              "enumValue": 7,
+              "name": "hz1600"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_acc:odr_t:schema:hz3200;2",
+              "displayName": {
+                "en": "3200"
+              },
+              "enumValue": 8,
+              "name": "hz3200"
+            }
+          ],
+          "valueSchema": "integer"
+        },
+        "unit": "hertz",
+        "writable": true,
+        "displayUnit": {
+          "en": "Hz"
+        },
+        "initialValue": 5
       },
       {
         "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_acc:fs;2",
@@ -882,7 +1003,7 @@
         "writable": false
       },
       {
-        "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_gyro:dimensions;2",
+        "@id": "dtmi:appconfig:nucleo_u575zi_q:SDATALOG_LSM6D1SV16X_MLC:sensors:ism6hg256x_gyro:dimensions;2",
         "@type": [
           "Property",
           "NumberValue"
@@ -935,6 +1056,19 @@
         "name": "sensor_category",
         "schema": "integer",
         "writable": false
+      },
+      {
+        "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_gyro:odr_triggered;2",
+        "@type": [
+          "Property",
+          "BooleanValue"
+        ],
+        "displayName": {
+          "en": "ODR Triggered"
+        },
+        "name": "odr_triggered",
+        "schema": "boolean",
+        "writable": true
       },
       {
         "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_gyro:odr;2",
@@ -1040,6 +1174,105 @@
               },
               "enumValue": 10,
               "name": "hz7680"
+            }
+          ],
+          "valueSchema": "integer"
+        },
+        "unit": "hertz",
+        "writable": true,
+        "displayUnit": {
+          "en": "Hz"
+        },
+        "initialValue": 5
+      },
+      {
+        "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_gyro:odr_t;2",
+        "@type": [
+          "Property",
+          "Initialized"
+        ],
+        "displayName": {
+          "en": "ODR T"
+        },
+        "name": "odr_t",
+        "schema": {
+          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_gyro:odr_t:schema;2",
+          "@type": "Enum",
+          "displayName": {
+            "en": "Enum"
+          },
+          "enumValues": [
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_gyro:odr_t:schema:hz12_5;2",
+              "displayName": {
+                "en": "12.5"
+              },
+              "enumValue": 0,
+              "name": "hz12_5"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_gyro:odr_t:schema:hz25;2",
+              "displayName": {
+                "en": "25"
+              },
+              "enumValue": 1,
+              "name": "hz25"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_gyro:odr_t:schema:hz50;2",
+              "displayName": {
+                "en": "50"
+              },
+              "enumValue": 2,
+              "name": "hz50"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_gyro:odr_t:schema:hz100;2",
+              "displayName": {
+                "en": "100"
+              },
+              "enumValue": 3,
+              "name": "hz100"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_gyro:odr_t:schema:hz200;2",
+              "displayName": {
+                "en": "200"
+              },
+              "enumValue": 4,
+              "name": "hz200"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_gyro:odr_t:schema:hz400;2",
+              "displayName": {
+                "en": "400"
+              },
+              "enumValue": 5,
+              "name": "hz400"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_gyro:odr_t:schema:hz800;2",
+              "displayName": {
+                "en": "800"
+              },
+              "enumValue": 6,
+              "name": "hz800"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_gyro:odr_t:schema:hz1600;2",
+              "displayName": {
+                "en": "1600"
+              },
+              "enumValue": 7,
+              "name": "hz1600"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:ism6hg256x_gyro:odr_t:schema:hz3200;2",
+              "displayName": {
+                "en": "3200"
+              },
+              "enumValue": 8,
+              "name": "hz3200"
             }
           ],
           "valueSchema": "integer"
@@ -1725,6 +1958,758 @@
     ],
     "displayName": {
       "en": "ISM6HG256X_MLC"
+    }
+  },
+  {
+    "@context": [
+      "dtmi:iotcentral:context;2",
+      "dtmi:dtdl:context;2"
+    ],
+    "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc;2",
+    "@type": "Interface",
+    "contents": [
+      {
+        "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:enable;2",
+        "@type": [
+          "Property",
+          "BooleanValue"
+        ],
+        "displayName": {
+          "en": "Enable"
+        },
+        "name": "enable",
+        "schema": "boolean",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:data_type;2",
+        "@type": [
+          "Property",
+          "StringValue"
+        ],
+        "displayName": {
+          "en": "Data type"
+        },
+        "name": "data_type",
+        "schema": "string",
+        "writable": false
+      },
+      {
+        "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:dimensions;2",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Dimensions"
+        },
+        "name": "dimensions",
+        "schema": "integer",
+        "writable": false
+      },
+      {
+        "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:unit;2",
+        "@type": [
+          "Property",
+          "StringValue"
+        ],
+        "displayName": {
+          "en": "Unit"
+        },
+        "name": "unit",
+        "schema": "string",
+        "writable": false
+      },
+      {
+        "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:short_unit;2",
+        "@type": [
+          "Property",
+          "StringValue"
+        ],
+        "displayName": {
+          "en": "Short Unit"
+        },
+        "name": "short_unit",
+        "schema": "string",
+        "writable": false
+      },
+      {
+        "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:sensor_category;2",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "description": {
+          "en": "0 = ISENSOR_CLASS_MEMS"
+        },
+        "displayName": {
+          "en": "Sensor Category"
+        },
+        "name": "sensor_category",
+        "schema": "integer",
+        "writable": false
+      },
+      {
+        "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:odr;2",
+        "@type": [
+          "Property",
+          "Initialized"
+        ],
+        "displayName": {
+          "en": "ODR"
+        },
+        "name": "odr",
+        "schema": {
+          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:odr:schema;2",
+          "@type": "Enum",
+          "displayName": {
+            "en": "Enum"
+          },
+          "enumValues": [
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:odr:schema:hz1_6;2",
+              "displayName": {
+                "en": "1.6"
+              },
+              "enumValue": 0,
+              "name": "hz1_6"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:odr:schema:hz3;2",
+              "displayName": {
+                "en": "3"
+              },
+              "enumValue": 1,
+              "name": "hz3"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:odr:schema:hz6;2",
+              "displayName": {
+                "en": "6"
+              },
+              "enumValue": 2,
+              "name": "hz6"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:odr:schema:hz12_5;2",
+              "displayName": {
+                "en": "12_5"
+              },
+              "enumValue": 3,
+              "name": "hz12_5"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:odr:schema:hz25;2",
+              "displayName": {
+                "en": "25"
+              },
+              "enumValue": 4,
+              "name": "hz25"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:odr:schema:hz50;2",
+              "displayName": {
+                "en": "50"
+              },
+              "enumValue": 5,
+              "name": "hz50"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:odr:schema:hz100;2",
+              "displayName": {
+                "en": "100"
+              },
+              "enumValue": 6,
+              "name": "hz100"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:odr:schema:hz200;2",
+              "displayName": {
+                "en": "200"
+              },
+              "enumValue": 7,
+              "name": "hz200"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:odr:schema:hz400;2",
+              "displayName": {
+                "en": "400"
+              },
+              "enumValue": 8,
+              "name": "hz400"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:odr:schema:hz800;2",
+              "displayName": {
+                "en": "800"
+              },
+              "enumValue": 9,
+              "name": "hz800"
+            }
+          ],
+          "valueSchema": "integer"
+        },
+        "unit": "hertz",
+        "writable": true,
+        "displayUnit": {
+          "en": "Hz"
+        },
+        "initialValue": 5
+      },
+      {
+        "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:fs;2",
+        "@type": [
+          "Property",
+          "Initialized"
+        ],
+        "displayName": {
+          "en": "FS"
+        },
+        "name": "fs",
+        "schema": {
+          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:fs:schema;2",
+          "@type": "Enum",
+          "displayName": {
+            "en": "Enum"
+          },
+          "enumValues": [
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:fs:schema:g2;2",
+              "displayName": {
+                "en": "2"
+              },
+              "enumValue": 0,
+              "name": "g2"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:fs:schema:g4;2",
+              "displayName": {
+                "en": "4"
+              },
+              "enumValue": 1,
+              "name": "g4"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:fs:schema:g8;2",
+              "displayName": {
+                "en": "8"
+              },
+              "enumValue": 2,
+              "name": "g8"
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:fs:schema:g16;2",
+              "displayName": {
+                "en": "16"
+              },
+              "enumValue": 3,
+              "name": "g16"
+            }
+          ],
+          "valueSchema": "integer"
+        },
+        "unit": "gForce",
+        "writable": true,
+        "displayUnit": {
+          "en": "g"
+        },
+        "initialValue": 1
+      },
+      {
+        "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:initial_timestamp;2",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Initial Timestamp"
+        },
+        "name": "initial_timestamp",
+        "schema": "double",
+        "writable": false
+      },
+      {
+        "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:sensitivity;2",
+        "@type": [
+          "Property",
+          "NumberValue"
+        ],
+        "displayName": {
+          "en": "Sensitivity"
+        },
+        "name": "sensitivity",
+        "schema": "double",
+        "writable": false
+      },
+      {
+        "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:annotation;2",
+        "@type": [
+          "Property",
+          "StringValue"
+        ],
+        "displayName": {
+          "en": "Annotation"
+        },
+        "name": "annotation",
+        "schema": "string",
+        "writable": true
+      },
+      {
+        "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output;2",
+        "@type": [
+          "Telemetry",
+          "StringValue"
+        ],
+        "description": {
+          "en": "BINARY"
+        },
+        "displayName": {
+          "en": "Output"
+        },
+        "name": "output",
+        "schema": "string",
+        "writable": false
+      },
+      {
+        "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream;2",
+        "@type": "Property",
+        "displayName": {
+          "en": "Output ST Stream"
+        },
+        "name": "output_st_stream",
+        "schema": {
+          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema;2",
+          "@type": "Object",
+          "displayName": {
+            "en": "Object"
+          },
+          "fields": [
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:channel_specification;2",
+              "displayName": {
+                "en": "Channel Specification"
+              },
+              "name": "channel_specification",
+              "schema": {
+                "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:channel_specification:schema;2",
+                "@type": "Object",
+                "displayName": {
+                  "en": "Object"
+                },
+                "fields": [
+                  {
+                    "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:channel_specification:schema:interface;2",
+                    "displayName": {
+                      "en": "Interface"
+                    },
+                    "name": "interface",
+                    "schema": {
+                      "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:channel_specification:schema:interface:schema;2",
+                      "@type": "Enum",
+                      "displayName": {
+                        "en": "Enum"
+                      },
+                      "enumValues": [
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:channel_specification:schema:interface:schema:sd;2",
+                          "displayName": {
+                            "en": "SD"
+                          },
+                          "enumValue": "0",
+                          "name": "sd"
+                        },
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:channel_specification:schema:interface:schema:usb;2",
+                          "displayName": {
+                            "en": "USB"
+                          },
+                          "enumValue": "1",
+                          "name": "usb"
+                        },
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:channel_specification:schema:interface:schema:ble;2",
+                          "displayName": {
+                            "en": "BLE"
+                          },
+                          "enumValue": "2",
+                          "name": "ble"
+                        },
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:channel_specification:schema:interface:schema:serial;2",
+                          "displayName": {
+                            "en": "Serial"
+                          },
+                          "enumValue": "3",
+                          "name": "serial"
+                        },
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:channel_specification:schema:interface:schema:link;2",
+                          "displayName": {
+                            "en": "Link"
+                          },
+                          "enumValue": "4",
+                          "name": "link"
+                        }
+                      ],
+                      "valueSchema": "string"
+                    }
+                  },
+                  {
+                    "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:channel_specification:schema:protocol_type;2",
+                    "displayName": {
+                      "en": "Protocol Type"
+                    },
+                    "name": "protocol_type",
+                    "schema": {
+                      "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:channel_specification:schema:protocol_type:schema;2",
+                      "@type": "Enum",
+                      "displayName": {
+                        "en": "Enum"
+                      },
+                      "enumValues": [
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:channel_specification:schema:protocol_type:schema:hsd;2",
+                          "displayName": {
+                            "en": "HSD"
+                          },
+                          "enumValue": "0",
+                          "name": "hsd"
+                        },
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:channel_specification:schema:protocol_type:schema:bluest;2",
+                          "displayName": {
+                            "en": "BLUEST"
+                          },
+                          "enumValue": "1",
+                          "name": "bluest"
+                        },
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:channel_specification:schema:protocol_type:schema:aspep_sstl;2",
+                          "displayName": {
+                            "en": "ASPEP_SSTL"
+                          },
+                          "enumValue": "2",
+                          "name": "aspep_sstl"
+                        }
+                      ],
+                      "valueSchema": "string"
+                    }
+                  },
+                  {
+                    "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:channel_specification:schema:protocol_version;2",
+                    "displayName": {
+                      "en": "Protocol Version"
+                    },
+                    "name": "protocol_version",
+                    "schema": "string"
+                  },
+                  {
+                    "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:channel_specification:schema:payload_type;2",
+                    "displayName": {
+                      "en": "Payload Type"
+                    },
+                    "name": "payload_type",
+                    "schema": {
+                      "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:channel_specification:schema:payload_type:schema;2",
+                      "@type": "Enum",
+                      "displayName": {
+                        "en": "Enum"
+                      },
+                      "enumValues": [
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:channel_specification:schema:payload_type:schema:custom;2",
+                          "displayName": {
+                            "en": "CUSTOM"
+                          },
+                          "enumValue": "0",
+                          "name": "custom"
+                        },
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:channel_specification:schema:payload_type:schema:standard;2",
+                          "displayName": {
+                            "en": "STANDARD"
+                          },
+                          "enumValue": "1",
+                          "name": "standard"
+                        },
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:channel_specification:schema:payload_type:schema:hsd;2",
+                          "displayName": {
+                            "en": "HSD"
+                          },
+                          "enumValue": "2",
+                          "name": "hsd"
+                        }
+                      ],
+                      "valueSchema": "string"
+                    }
+                  },
+                  {
+                    "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:channel_specification:schema:payload_version;2",
+                    "displayName": {
+                      "en": "Payload Version"
+                    },
+                    "name": "payload_version",
+                    "schema": "string"
+                  },
+                  {
+                    "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:channel_specification:schema:stream_id;2",
+                    "displayName": {
+                      "en": "Stream ID"
+                    },
+                    "name": "stream_id",
+                    "schema": "integer"
+                  }
+                ]
+              }
+            },
+            {
+              "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification;2",
+              "displayName": {
+                "en": "Payload Specification"
+              },
+              "name": "payload_specification",
+              "schema": {
+                "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema;2",
+                "@type": "Object",
+                "displayName": {
+                  "en": "Object"
+                },
+                "fields": [
+                  {
+                    "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:timestamp;2",
+                    "displayName": {
+                      "en": "Timestamp"
+                    },
+                    "name": "timestamp",
+                    "schema": {
+                      "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:timestamp:schema;2",
+                      "@type": "Object",
+                      "displayName": {
+                        "en": "Object"
+                      },
+                      "fields": [
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:timestamp:schema:data_type;2",
+                          "displayName": {
+                            "en": "Data Type"
+                          },
+                          "name": "data_type",
+                          "schema": "string"
+                        },
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:timestamp:schema:dimensions;2",
+                          "displayName": {
+                            "en": "Dimensions"
+                          },
+                          "name": "dimensions",
+                          "schema": "integer"
+                        },
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:timestamp:schema:unit;2",
+                          "displayName": {
+                            "en": "Unit"
+                          },
+                          "name": "unit",
+                          "schema": "string"
+                        },
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:timestamp:schema:short_unit;2",
+                          "displayName": {
+                            "en": "Short Unit"
+                          },
+                          "name": "short_unit",
+                          "schema": "string"
+                        },
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:timestamp:schema:labels;2",
+                          "displayName": {
+                            "en": "Labels"
+                          },
+                          "name": "labels",
+                          "schema": "string"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:x;2",
+                    "displayName": {
+                      "en": "X"
+                    },
+                    "name": "x",
+                    "schema": {
+                      "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:x:schema;2",
+                      "@type": "Object",
+                      "displayName": {
+                        "en": "Object"
+                      },
+                      "fields": [
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:x:schema:data_type;2",
+                          "displayName": {
+                            "en": "Data Type"
+                          },
+                          "name": "data_type",
+                          "schema": "string"
+                        },
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:x:schema:dimensions;2",
+                          "displayName": {
+                            "en": "Dimensions"
+                          },
+                          "name": "dimensions",
+                          "schema": "integer"
+                        },
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:x:schema:unit;2",
+                          "displayName": {
+                            "en": "Unit"
+                          },
+                          "name": "unit",
+                          "schema": "string"
+                        },
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:x:schema:short_unit;2",
+                          "displayName": {
+                            "en": "Short Unit"
+                          },
+                          "name": "short_unit",
+                          "schema": "string"
+                        },
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:x:schema:labels;2",
+                          "displayName": {
+                            "en": "Labels"
+                          },
+                          "name": "labels",
+                          "schema": "string"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:y;2",
+                    "displayName": {
+                      "en": "Y"
+                    },
+                    "name": "y",
+                    "schema": {
+                      "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:y:schema;2",
+                      "@type": "Object",
+                      "displayName": {
+                        "en": "Object"
+                      },
+                      "fields": [
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:y:schema:data_type;2",
+                          "displayName": {
+                            "en": "Data Type"
+                          },
+                          "name": "data_type",
+                          "schema": "string"
+                        },
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:y:schema:dimensions;2",
+                          "displayName": {
+                            "en": "Dimensions"
+                          },
+                          "name": "dimensions",
+                          "schema": "integer"
+                        },
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:y:schema:unit;2",
+                          "displayName": {
+                            "en": "Unit"
+                          },
+                          "name": "unit",
+                          "schema": "string"
+                        },
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:y:schema:short_unit;2",
+                          "displayName": {
+                            "en": "Short Unit"
+                          },
+                          "name": "short_unit",
+                          "schema": "string"
+                        },
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:y:schema:labels;2",
+                          "displayName": {
+                            "en": "Labels"
+                          },
+                          "name": "labels",
+                          "schema": "string"
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:z;2",
+                    "displayName": {
+                      "en": "Z"
+                    },
+                    "name": "z",
+                    "schema": {
+                      "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:z:schema;2",
+                      "@type": "Object",
+                      "displayName": {
+                        "en": "Object"
+                      },
+                      "fields": [
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:z:schema:data_type;2",
+                          "displayName": {
+                            "en": "Data Type"
+                          },
+                          "name": "data_type",
+                          "schema": "string"
+                        },
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:z:schema:dimensions;2",
+                          "displayName": {
+                            "en": "Dimensions"
+                          },
+                          "name": "dimensions",
+                          "schema": "integer"
+                        },
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:z:schema:unit;2",
+                          "displayName": {
+                            "en": "Unit"
+                          },
+                          "name": "unit",
+                          "schema": "string"
+                        },
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:z:schema:short_unit;2",
+                          "displayName": {
+                            "en": "Short Unit"
+                          },
+                          "name": "short_unit",
+                          "schema": "string"
+                        },
+                        {
+                          "@id": "dtmi:appconfig:nucleo_u575zi_q:STAIOTCRAFT_SDATALOG:sensors:iis2dulpx_acc:output_st_stream:schema:payload_specification:schema:z:schema:labels;2",
+                          "displayName": {
+                            "en": "Labels"
+                          },
+                          "name": "labels",
+                          "schema": "string"
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "writable": false
+      }
+    ],
+    "displayName": {
+      "en": "IIS2DULPX_ACC"
     }
   },
   {
